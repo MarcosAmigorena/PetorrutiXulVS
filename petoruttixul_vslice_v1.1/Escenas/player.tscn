@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://be1vbt33n5kmu"]
+
+[ext_resource type="Script" uid="uid://b2dy4g5kdy8v7" path="res://Scripts/player.gd" id="1_i8vih"]
+[ext_resource type="Texture2D" uid="uid://cniqiiicgeax8" path="res://Sprites/chr_kyrie_stay_R.png" id="2_qgqwx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6njrx"]
+size = Vector2(20, 51)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(27, 7)
+script = ExtResource("1_i8vih")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, 0)
+position_smoothing_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("2_qgqwx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_6njrx")

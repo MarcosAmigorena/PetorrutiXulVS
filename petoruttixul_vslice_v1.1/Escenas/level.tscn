@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw10qw2mnfyre"]
+
+[ext_resource type="Script" uid="uid://dt3bamkxlv0gs" path="res://Scripts/level.gd" id="1_3kjvw"]
+[ext_resource type="PackedScene" uid="uid://be1vbt33n5kmu" path="res://Escenas/player.tscn" id="2_a1lqj"]
+[ext_resource type="Texture2D" uid="uid://cq6x7qobcky3n" path="res://Sprites/Captura de pantalla 2025-09-19 164757.png" id="3_a1lqj"]
+[ext_resource type="PackedScene" uid="uid://cbuv3ck0vbkwp" path="res://Escenas/player_2.tscn" id="3_evxt5"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_3kjvw")
+
+[node name="Player" parent="." instance=ExtResource("2_a1lqj")]
+position = Vector2(999, 568)
+
+[node name="Player_2" parent="." instance=ExtResource("3_evxt5")]
+position = Vector2(1242, 565)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="SwitchButton" type="Button" parent="HUD"]
+anchors_preset = -1
+anchor_right = 0.778
+anchor_bottom = 1.265
+offset_left = 321.0
+offset_top = 301.0
+offset_right = -1171.44
+offset_bottom = -494.8
+text = "SWITCH"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(494, 1252)
+scale = Vector2(2.69624, 1.67945)
+texture = ExtResource("3_a1lqj")
